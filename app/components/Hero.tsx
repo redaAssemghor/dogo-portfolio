@@ -20,7 +20,7 @@ const Hero = () => {
   });
 
   return (
-    <div className="bg-gray-800 flex justify-between items-center flex-col lg:flex-row p-6 lg:px-40">
+    <div className="bg-gray-800 text-white flex justify-between items-center flex-col lg:flex-row p-6 lg:px-40">
       <span className="font-black text-5xl rotate-90 absolute lg:-right-20 left-10 -translate-x-1/2 top-1/2 opacity-25">
         DOGO THEME
       </span>

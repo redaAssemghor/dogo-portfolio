@@ -9,19 +9,19 @@ const Footer = () => {
         </p>
         <nav className="flex gap-10 mt-3 lg:mt-0">
           <Link
-            className="font-bold text-xl hover:underline hover:text-[--orange-primary] hover:scale-105 duration-500"
+            className="font-bold lg:text-xl text-sm hover:underline hover:text-[--orange-primary] hover:scale-105 duration-500"
             href="#privacy-policy"
           >
             Privacy Policy
           </Link>
           <Link
-            className="font-bold text-xl hover:underline hover:text-[--orange-primary] hover:scale-105 duration-500"
+            className="font-bold lg:text-xl text-sm hover:underline hover:text-[--orange-primary] hover:scale-105 duration-500"
             href="#terms-of-service"
           >
             Terms of Service
           </Link>
           <Link
-            className="font-bold text-xl hover:underline hover:text-[--orange-primary] hover:scale-105 duration-500"
+            className="font-bold lg:text-xl text-sm hover:underline hover:text-[--orange-primary] hover:scale-105 duration-500"
             href="#contact"
           >
             Contact Us
