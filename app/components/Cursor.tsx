@@ -2,25 +2,28 @@
 import { useEffect, useRef } from "react";
 import gsap from "gsap";
 
+// Linear interpolation function
+const lerp = (x: number, y: number, a: number): number => x * (1 - a) + y * a;
+
 export default function BlurryCursor() {
-  const mouse = useRef({ x: 0, y: 0 });
-  const delayedMouse = useRef({ x: 0, y: 0 });
-  const circle = useRef(null); // The fixed black dot
-  const delayedCircle = useRef(null); // The delayed cursor
-  const rafId = useRef(null);
+  const mouse = useRef<{ x: number; y: number }>({ x: 0, y: 0 });
+  const delayedMouse = useRef<{ x: number; y: number }>({ x: 0, y: 0 });
+  const circle = useRef<HTMLDivElement | null>(null); // The fixed black dot
+  const delayedCircle = useRef<HTMLDivElement | null>(null); // The delayed cursor
+  const rafId = useRef<number | null>(null);
   const size = 8; // Fixed black dot size
   const delayedSize = 40; // Delayed circle size
   const delay = 0.075; // Delay factor for smoother movement
 
   // Manage mouse move events for the fixed black dot
-  const manageMouseMove = (e) => {
+  const manageMouseMove = (e: MouseEvent) => {
     const { clientX, clientY } = e;
     mouse.current = { x: clientX, y: clientY };
     moveCircle(mouse.current.x, mouse.current.y);
   };
 
   // Move the fixed black dot to the current mouse position
-  const moveCircle = (x, y) => {
+  const moveCircle = (x: number, y: number) => {
     if (!circle.current) return;
     gsap.set(circle.current, { x, y, xPercent: -50, yPercent: -50 });
   };
@@ -37,7 +40,7 @@ export default function BlurryCursor() {
   };
 
   // Move the delayed circle smoothly to the interpolated position
-  const moveDelayedCircle = (x, y) => {
+  const moveDelayedCircle = (x: number, y: number) => {
     if (!delayedCircle.current) return;
     gsap.set(delayedCircle.current, { x, y, xPercent: -50, yPercent: -50 });
   };
@@ -48,7 +51,9 @@ export default function BlurryCursor() {
 
     return () => {
       window.removeEventListener("mousemove", manageMouseMove);
-      window.cancelAnimationFrame(rafId.current);
+      if (rafId.current) {
+        window.cancelAnimationFrame(rafId.current);
+      }
     };
   }, []);
 
@@ -88,6 +93,3 @@ export default function BlurryCursor() {
     </div>
   );
 }
-
-// Linear interpolation function
-const lerp = (x, y, a) => x * (1 - a) + y * a;
