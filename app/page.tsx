@@ -6,7 +6,7 @@ import Skills from "./components/Skills";
 
 export default function Home() {
   return (
-    <main className="bg-gray-50 dark:bg-gray-800 text-white overflow-hidden">
+    <main className="bg-gray-50 dark:bg-gray-800 dark:text-white  overflow-hidden">
       <Header />
       <Hero />
       <Skills />
