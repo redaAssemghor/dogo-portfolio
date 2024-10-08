@@ -46,7 +46,7 @@ const Header = () => {
   };
 
   return (
-    <header className="flex items-center justify-between lg:px-40 py-3">
+    <header className="flex items-center justify-between lg:px-40 py-3 bg-gray-800">
       <div>
         <Link href={"/"}>
           <Image

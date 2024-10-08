@@ -56,7 +56,7 @@ const Skills = () => {
   });
 
   return (
-    <div id="about" className="p-6 lg:px-40 custom-radial-bot">
+    <div id="about" className="bg-gray-800 p-6 lg:px-40 custom-radial-bot">
       <h1 className="text-2xl mb-10 uppercase md:text-6xl font-extrabold tracking-wide bg-gradient-to-r from-[--orange-primary] to-[--dark-green] text-transparent bg-clip-text">
         Skills & Experience
       </h1>

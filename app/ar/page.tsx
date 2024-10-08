@@ -11,13 +11,13 @@ const ARView = () => {
     // Load A-Frame script
     const aframeScript = document.createElement("script");
     aframeScript.src = "https://aframe.io/releases/1.2.0/aframe.min.js";
-    aframeScript.async = false; // Ensure it's not async so that AR.js loads after it
+    aframeScript.async = true; // Load asynchronously
     aframeScript.onload = () => {
       // Load AR.js script after A-Frame is ready
       const arScript = document.createElement("script");
       arScript.src =
         "https://cdn.rawgit.com/jeromeetienne/ar.js/master/aframe/build/aframe-ar.js";
-      arScript.async = false; // Ensure AR.js loads after A-Frame
+      arScript.async = true; // Load asynchronously
 
       arScript.onload = () => {
         // Create the AR scene after both scripts are loaded
@@ -50,6 +50,7 @@ const ARView = () => {
     // Append A-Frame script to the head
     document.head.appendChild(aframeScript);
 
+    // Cleanup function to remove scripts and the scene
     return () => {
       const aframeScript = document.querySelector(
         `script[src="https://aframe.io/releases/1.2.0/aframe.min.js"]`
