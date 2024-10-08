@@ -62,7 +62,7 @@ const Header = () => {
         <div className="block relative lg:hidden">
           <button
             onClick={handleMenuToggle}
-            className="text-4xl z-50 absolute top-0 right-4"
+            className="text-4xl z-50 absolute -top-5 right-4"
           >
             {isMenuOpen ? <FiX size={40} /> : <FiMenu size={40} />}
           </button>

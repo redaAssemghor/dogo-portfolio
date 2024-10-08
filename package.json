@@ -13,6 +13,7 @@
     "@gsap/react": "^2.1.1",
     "@react-three/drei": "^9.114.3",
     "@react-three/fiber": "^8.17.9",
+    "@react-three/xr": "^6.2.13",
     "@types/three": "^0.169.0",
     "aframe": "^1.6.0",
     "aframe-react": "^4.4.0",
