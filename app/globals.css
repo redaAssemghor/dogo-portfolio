@@ -4,4 +4,31 @@
 
 :root {
   --orange-primary: #ff8e00;
+  --dark-orange: #be4f0a;
+  --dark-green: #172d13;
+  --light-green: #6bb77b;
+}
+
+.custom-radial-top {
+  background-image: radial-gradient(
+    44.36% 38.02% at 50% 0%,
+    rgba(255, 142, 0, 0.15),
+    rgba(215, 111, 48, 0)
+  );
+}
+
+.custom-radial-bot {
+  background-image: radial-gradient(
+    60% 20% at 50% 100%,
+    rgba(255, 142, 0, 0.15),
+    rgba(215, 111, 48, 0)
+  );
+}
+
+.custom-radial {
+  background-image: radial-gradient(
+    44.36% 38.02% at 50% 50%,
+    rgba(255, 142, 0, 0.15),
+    rgba(215, 111, 48, 0)
+  );
 }
