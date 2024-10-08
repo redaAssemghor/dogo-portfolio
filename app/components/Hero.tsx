@@ -39,12 +39,11 @@ const Hero = () => {
         </p>
         <div className="flex flex-col lg:flex-row lg:items-center items-start gap-10 w-full justify-between">
           <motion.button
+            className="py-3 px-6 font-semibold border"
             whileHover={{ scale: 1.1, backgroundColor: "#ff8e00" }}
             whileTap={{ scale: 0.9 }}
           >
-            <button className="py-3 px-6 font-semibold border">
-              Download Max&apos;s Resume (Doggo Style)
-            </button>
+            Download Max&apos;s Resume
           </motion.button>
 
           <motion.button

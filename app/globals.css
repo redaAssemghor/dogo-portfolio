@@ -32,3 +32,27 @@
     rgba(215, 111, 48, 0)
   );
 }
+
+/* Custom scrollbar styles globally */
+* {
+  scrollbar-width: thin;
+  scrollbar-color: #ff8e00 #1f2937;
+}
+
+/* For WebKit browsers (like Chrome, Safari) */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #ff8e00;
+  border-radius: 50px;
+}
+
+::-webkit-scrollbar-track {
+  background-color: #1f2937;
+}
+
+* {
+  cursor: none; /* Hides the default cursor */
+}

@@ -187,8 +187,9 @@ const ContactPage = () => {
                 className="bg-orange-500 text-white py-4 px-6 rounded-lg"
                 whileHover={{ scale: 1.1, backgroundColor: "#ff8e00" }}
                 whileTap={{ scale: 0.9 }}
+                type="submit"
               >
-                <button type="submit">Submit</button>
+                Submit
               </motion.button>
             </div>
           </form>
